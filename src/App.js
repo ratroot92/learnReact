@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
+import ShopPage from './components/ShopPage'
 function App() {
   return (
     // <div className="App">
@@ -19,7 +20,12 @@ function App() {
     //     </a>
     //   </header>
     // </div>
+<div>
 <Header/>
+<div className="row">
+<ShopPage/>
+</div>
+</div>
   );
 }
 
