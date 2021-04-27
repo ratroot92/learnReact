@@ -2,7 +2,7 @@ import React from 'react'
 
  function CategoryStrip() {
     return (
-        <div className=" mt-2 border border-success p-2 col-md-12 d-flex flex-row justify-content-around align-items-center">
+        <div className="  mt-2 border border-success p-2  d-flex flex-row justify-content-around align-items-center">
             <button 
             type="button"
             className="btn btn-sm btn-primary text-white"

@@ -2,7 +2,8 @@ import React from 'react';
 
 
 function Header(){
-    return (<nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    return (<div className="col-md-12 m-0 p-0 ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark">
     <a className="navbar-brand text-white" href="#">React Developers</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -33,7 +34,8 @@ function Header(){
       </ul>
      
     </div>
-  </nav>)
+  </nav>
+    </div>)
 }
 
 

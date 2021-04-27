@@ -1,18 +1,32 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import logo from './logo.svg';
+import './App.css';
+import Header from './components/Header';
+import Footer from './components/Layouts/Footer';
+import HomePage from './components/HomePage';
+function App() {
+	return (
+		<div className='container-fluid'>
+			{/* Header Start */}
+			<div className='row'>
+				<Header />
+			</div>
+			{/* Header End  */}
 
-import Child1 from './childs/Child1';
+			{/* Start Content -- Body  */}
+			<div className='row'>
+				<HomePage />
+			</div>
+			{/*End Content -- Body */}
 
-
-
-function App (){
-
-return (<div className="container-fluid">
-<div className="row">
-    <div className="col-md-12 text-center">   <Child1/></div>
-</div>
- 
-</div>)
-
+		
+			{/* Header Start */}
+			<div className='row'>
+				<Footer />
+			</div>
+			{/* Header End  */}
+		</div>
+	);
 }
 
 export default App;
