@@ -4,6 +4,9 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Layouts/Footer';
 import HomePage from './components/HomePage';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root')
 function App() {
 	return (
 		<div className='container-fluid'>

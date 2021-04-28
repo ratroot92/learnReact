@@ -1,16 +1,13 @@
 import React from 'react';
 import products from './../data/data'
-import ShopCart from './ShopCompoenents/ShopCart'
-
-
-
-
+import CartModal from './ShopCompoenents/CartModal'
 
 
 function ShopPage (){
 
 
 const [state,setState]=React.useState(products)
+const [controlModal,setControlModal]=React.useState(false)
 const [cartObject,setCartObject]=React.useState({
     totalPrice:0,//int //var
     totalItems:0,//int //var
@@ -42,16 +39,27 @@ const addToCart=(product)=>{
 
 
 
-// const resetCart= ()=>{
-//     setCart({totalItems:0,totalPrice:0})
-// }
+const openModal= ()=>{
+    console.log('====================================');
+    console.log("openModal");
+    console.log('====================================');
+    setControlModal(true)
+}
    
 
 
 
     return (
-        <div className="row">
-        <ShopCart cart={cartObject}></ShopCart>
+       
+       <div className="row">
+       <div className="col-md-12">
+           <CartModal control={controlModal} cart={cartObject} setControl={setControlModal}/>
+       </div>
+        {/* <ShopCart cart={cartObject}></ShopCart> */}
+        <div className="col-md-2 offset-md-10  d-flex flex-row justify-content-end mt-2 align-items-center">
+        <button className="btn btn-warning btn-sm font-weight-bold " onClick={openModal}>View Cart</button>
+        </div> 
+       
        
         {
             state.map((product,index)=>{
